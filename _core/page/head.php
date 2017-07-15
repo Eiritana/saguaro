@@ -33,7 +33,7 @@ class Head {
  
         /* begin page content */
         $dat = "<!DOCTYPE html><head>
-                <meta name='description' content='" . S_DESCR . "'/>
+                <meta name='description' content='" . META_DESCRIPTION . "'/>
                 <meta http-equiv='content-type'  content='text/html;charset=utf-8'/>
                 <meta name='viewport' content='width=device-width, initial-scale=1'/>
                 <link rel='shortcut icon' href='" . CSS_PATH . "imgs/favicon.ico'>
@@ -68,7 +68,7 @@ class Head {
             $headSub .= '<div class="boardSubtitle">' . strip_tags($this->info['page']['sub']) . '</div>';
             $boardTitle = "<div class='boardTitle'>" . strip_tags($this->info['page']['title']) . "</div>" . $headSub;
 
-            $bannerImg .= (defined('SHOWTITLEIMG') && SHOWTITLEIMG) ? '<img class="bannerImg" data-src="' . $this->randomBanner() . '" src="' . $this->randomBanner() . '" /><br>' : '';
+            $bannerImg .= (defined('SHOWTITLEIMG') && SHOW_BANNER) ? '<img class="bannerImg" data-src="' . $this->randomBanner() . '" src="' . $this->randomBanner() . '" /><br>' : '';
 
             $ribbon = ($admin) ? $this->adminRibbon() . "<hr>" : null;
 

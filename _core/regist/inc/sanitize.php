@@ -24,7 +24,7 @@ class Sanitize {
         $post['name'] = str_replace(S_MANAGEMENT, '"' . S_MANAGEMENT . '"', $post['name']);
         $post['name'] = str_replace(S_DELETION, '"' . S_DELETION . '"', $post['name']);
 
-        if (strlen($post['comment']) > S_POSTLENGTH)    return error(S_TOOLONG);
+        if (strlen($post['comment']) > POSTLENGTH)      return error(S_TOOLONG);
         if (strlen($post['name']) > 100)                return error(S_TOOLONG);
         if (strlen($post['email']) > 100)               return error(S_TOOLONG);
         if (strlen($post['subject']) > 100)             return error(S_TOOLONG);

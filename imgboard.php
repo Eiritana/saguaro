@@ -22,6 +22,10 @@ Remember to look through older threads and see if your problem wasn't solved alr
 require "config.php";
 session_start();
 
+require_once(CORE_DIR . "/configs/load.php");
+$configLoader = new SaguaroConfigLoader;
+$configLoader->initialize();
+
 require_once(CORE_DIR . "/log/log.php");
 $my_log = new Log;
 

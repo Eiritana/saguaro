@@ -60,7 +60,7 @@ class Log {
         $numThreads = count($treeline);
         
         $head->info['page']['title'] = "/" . BOARD_DIR . "/ - " . TITLE;
-        $head->info['page']['sub'] = S_HEADSUB;
+        $head->info['page']['sub'] = SUBTITLE;
         $head->info['js']['script'] = ["extension.js"]; //Add extra scripts to be included on every page <head> here.
         if (COUNTRY_FLAGS) array_push($head->info['css']['sheet'], "/flags/flags.css");
         if (defined(MOBILE_THEME) && MOBILE_THEME) array_push($head->info['css']['sheet'], "/stylesheets/mobile.css");
